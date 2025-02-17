@@ -18,6 +18,7 @@ namespace ToDoListApp
             {
                 Tasks.Add(new TaskItem { Name = NewTaskEntry.Text, IsCompleted = false });
             }
+            ClearEntries();
         }
 
         private void OnDeleteTaskClicked(object sender, EventArgs e)
@@ -29,6 +30,11 @@ namespace ToDoListApp
             {
                 Tasks.Remove(task);
             }
+        }
+
+        private void ClearEntries()
+        {
+            NewTaskEntry.Text = string.Empty;
         }
     }
 
